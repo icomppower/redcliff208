@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>赤壁之戰 208 · Battle of Red Cliffs — Three Kingdoms Narrated History Map</title>
 <meta name="description" content="A self-playing 3D documentary of the Battle of Red Cliffs (赤壁之戰) 208 AD — Three Kingdoms. Follows the Romance of the Three Kingdoms dramatic line with historicity chips (正史/演義/爭議/傳說). Bilingual 繁中 + English." />
+<meta name="author" content="Johnny Lai — https://www.linkedin.com/in/icomppower/" />
+<meta name="author" content="Johnny Lai — https://www.linkedin.com/in/icomppower/" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="赤壁之戰 208 · Battle of Red Cliffs" />
 <meta property="og:description" content="3D narrated history map of the Battle of Red Cliffs, 208 AD. Nine acts following 《三國演義》with historicity chips. Bilingual 繁中 + English." />
@@ -70,13 +72,14 @@
   #notes-btn:hover,#lang-btn:hover,#music-btn:hover{background:rgba(216,192,138,.2)}
   #lang-btn,#music-btn{margin-left:6px}
   #music-btn.off{opacity:.5}
-  /* ---------- credits (duo: engine + author; the footer #credit and the upper-left #engine-credit below the © notice) ---------- */
-  #engine-credit{font-family:var(--mono);font-size:9px;letter-spacing:.2px;line-height:1.5;max-width:230px;
-    color:rgba(216,222,232,.72);text-shadow:0 1px 2px #000,0 0 5px #000;pointer-events:none}
+  /* ---------- credits (duo: engine + author; the footer #credit and the upper-left #title .credit) ---------- */
+  #title .credit{margin-top:8px;font-family:var(--mono);font-size:9px;letter-spacing:.2px;color:var(--ink-dim);line-height:1.45;max-width:230px}
+  #title .credit a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(216,192,138,.45);pointer-events:auto}
+  #title .credit a:hover{color:#fff}
   #credit{position:fixed;z-index:6;left:50%;bottom:18px;transform:translateX(-50%);max-width:94vw;text-align:center;line-height:1.5;
     font-family:var(--mono);font-size:10px;letter-spacing:.3px;color:rgba(216,222,232,.66);text-shadow:0 1px 2px #000,0 0 5px #000;pointer-events:none}
-  #credit a,#engine-credit a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(216,192,138,.55);pointer-events:auto}
-  #credit a:hover,#engine-credit a:hover{color:#fff}
+  #credit a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(216,192,138,.55);pointer-events:auto}
+  #credit a:hover{color:#fff}
 
   /* ---------- tiny faction key ---------- */
   #key{position:fixed;z-index:5;top:16px;right:18px;padding:8px 12px;font-size:11px}
@@ -178,14 +181,14 @@
     #title h1{font-size:17px} #caption .ttl{font-size:22px} #caption .narr{font-size:13px}
     #hud-tl{max-width:54vw} #key{max-width:46vw;font-size:10px;top:10px;right:10px;padding:6px 9px}
     #caption .narr .ne{font-size:10.5px}
-    #credit{font-size:8px;bottom:12px} #engine-credit{font-size:8px}
+    #credit{font-size:8px;bottom:12px} #title .credit{font-size:8px}
   }
   @media (max-width:440px){
     #title{padding:6px 9px 7px}
     #title h1{font-size:15px;letter-spacing:1.5px}
     #title .sub{font-size:7px;letter-spacing:1px;margin-top:2px}
     #notes-btn,#lang-btn{font-size:8px;margin-top:5px}
-    #engine-credit{font-size:7px;max-width:165px;line-height:1.4}
+    #title .credit{font-size:7px;margin-top:5px;max-width:165px;line-height:1.35}
     #hud-tl{max-width:48vw} #key{max-width:42vw;font-size:8px;top:10px;right:8px;padding:5px 6px}
     #resume{top:112px}
   }
@@ -203,12 +206,9 @@
       <button id="notes-btn"></button>
       <button id="lang-btn" aria-label="Toggle narration language"></button>
       <button id="music-btn" class="off" title="Music" aria-label="Background music">🔇</button>
+      <div class="credit"><a href="https://github.com/keithligh/cinematic-3d-battle-engine" target="_blank" rel="noopener">cinematic-3d-battle-engine</a> by Keith Li (MIT)</div>
     </div>
     <div id="disclaimer"></div>
-    <div id="engine-credit" lang="en">
-      <div>Built with <a href="https://github.com/keithligh/cinematic-3d-battle-engine" target="_blank" rel="noopener">cinematic-3d-battle-engine</a></div>
-      <div>Created by Keith Li · <a href="https://www.linkedin.com/in/keithlihk/" target="_blank" rel="noopener">Follow on LinkedIn</a></div>
-    </div>
     <div id="hint" class="panel"></div>
   </div>
 
@@ -222,10 +222,7 @@
     <div class="meta" id="cap-meta"></div>
   </div>
 
-  <div id="credit" lang="en">
-    <div>Built with <a href="https://github.com/keithligh/cinematic-3d-battle-engine" target="_blank" rel="noopener">cinematic-3d-battle-engine</a></div>
-    <div>Created by Keith Li · <a href="https://www.linkedin.com/in/keithlihk/" target="_blank" rel="noopener">Follow on LinkedIn</a></div>
-  </div>
+  <div id="credit" lang="en">Built by <a href="https://www.linkedin.com/in/icomppower/" target="_blank" rel="noopener">Johnny Lai</a></div>
 
   <!-- minimal transport (auto-hides) -->
   <div id="controls">
